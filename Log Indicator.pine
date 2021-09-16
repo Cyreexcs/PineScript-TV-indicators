@@ -1,10 +1,10 @@
 // ©Cyreexcs
-
+// the Calculation goes the following log(X/Ema) = A; X=Price/ A=Level of over extention 
 //@version=4
+
 study(title="Locodexg", shorttitle="LogChartcodex=cyreex")
 len1 = ema(close,21)
 len2 = ema(close,1)
 len = log(len2/len1)
 
-    
 plot(len,color=color.yellow, title="MA")
