@@ -1,0 +1,10 @@
+//@Cyreexcs
+//@version=2
+study(title="conditional colours with if/else - example", overlay=true)
+
+macouleur = if (close > close[21])
+    blue
+else
+    yellow
+
+plot(series=ema(high, 1), color=macouleur)
