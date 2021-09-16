@@ -1,0 +1,20 @@
+//@Cyreexcs
+//@version=4
+
+study(title="investortool", shorttitle="slimmy", overlay=true, resolution="")
+len = input(150, minval=0, title="Length")
+src = input(close, title="Source")
+offset = input(title="Offset", type=input.integer, defval=2, minval=-500, maxval=1000)
+out = ema(src, len)
+len2 = input(4, minval=0, title="Length")
+src2 = input(close, title="Source")
+offset1 = input(title="Offset", type=input.integer, defval=0, minval=-500, maxval=1000)
+out1 = ema(src2, len2)
+len3 = input(750, minval=0, title="Length")
+src3 = input(close, title="Source")
+offset3 = input(title="Offset", type=input.integer, defval=0, minval=-500, maxval=1000)
+out3 = ema(src3, len3)*2
+
+plot(out, title="EMA", color=color.blue, offset=offset)
+plot(out1, title="EMA", color=color.orange, offset=offset)
+plot(out3, title="EMA", color=color.yellow, offset=offset)
